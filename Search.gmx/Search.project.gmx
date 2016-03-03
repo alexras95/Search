@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\newmessage</sprite>
     <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\sprite2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -22,6 +23,8 @@
   <objects name="objects">
     <object>objects\NewClueMoe</object>
     <object>objects\NewClueHomer</object>
+    <object>objects\NewClueBarney</object>
+    <object>objects\Finish</object>
     <object>objects\message</object>
   </objects>
   <rooms name="rooms">
