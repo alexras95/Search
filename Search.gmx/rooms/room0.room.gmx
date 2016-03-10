@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="NewClueMoe" x="1664" y="352" name="inst_006AEB21" locked="0" code="" scaleX="0.417391300201416" scaleY="0.417391300201416" colour="4294967295" rotation="0"/>
+    <instance objName="NewClueLenny" x="1472" y="384" name="inst_93D36FA1" locked="0" code="" scaleX="0.443478256464005" scaleY="0.443478256464005" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
