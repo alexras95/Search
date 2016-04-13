@@ -25,12 +25,17 @@
     <object>objects\NewClueMoe</object>
     <object>objects\NewClueHomer</object>
     <object>objects\NewClueBarney</object>
-    <object>objects\Finish</object>
-    <object>objects\message</object>
+    <object>objects\NewClueAl</object>
+    <object>objects\NewClueRandomGuy</object>
     <object>objects\NewClueLenny</object>
+    <object>objects\Watch</object>
+    <object>objects\message</object>
+    <object>objects\object_countup_controller</object>
+    <object>objects\object_draw_scores</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\rm_scores</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
