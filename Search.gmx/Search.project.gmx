@@ -10,6 +10,7 @@
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprite4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -28,6 +29,7 @@
     <object>objects\NewClueAl</object>
     <object>objects\NewClueRandomGuy</object>
     <object>objects\NewClueLenny</object>
+    <object>objects\fakeWatch</object>
     <object>objects\Watch</object>
     <object>objects\message</object>
     <object>objects\object_countup_controller</object>
