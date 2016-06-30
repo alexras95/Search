@@ -51,4 +51,14 @@ public class TimerScript : MonoBehaviour {
     {
         return Convert.ToInt32((runTimeMinutes * 60 + runTimeSeconds) * 100 + runTimeCentiseconds);
     }
+
+    public void AddTime()
+    {
+        runTimeSeconds += 1;
+        if (runTimeSeconds >= 60)
+        {
+            runTimeSeconds = 0;
+            runTimeMinutes++;
+        }
+    }
 }

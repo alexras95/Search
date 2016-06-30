@@ -2,9 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MessageScript : MonoBehaviour
 {
+    public TimerScript timer;
     public LostObjectScript lostObject;
     public string message;
     public string message2;
@@ -17,24 +19,28 @@ public class MessageScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //Debug.Log("1" + message + "1");
+        //Debug.Log("2" + message2 + "2");
+        //Debug.Log("3" + message3 + "3");
+
         originalPos = this.gameObject.transform.position;
         StartCoroutine(FlowMoving());
 
         if(lostObject.state == 1)
         {
-            if(message == "")
+            if(String.IsNullOrEmpty(message))
             {
                 this.gameObject.SetActive(false);
-            }
+            }      
         }else if(lostObject.state == 2)
         {
-            if(message2 == "")
+            if (String.IsNullOrEmpty(message2))
             {
                 this.gameObject.SetActive(false);
             }
         }else if(lostObject.state == 3)
         {
-            if(message3 == "")
+            if (String.IsNullOrEmpty(message3))
             {
                 this.gameObject.SetActive(false);
             }
@@ -49,7 +55,6 @@ public class MessageScript : MonoBehaviour
 
     void OnMouseDown()
     {
-
         if (lostObject.state == 1)
         {
             messageText.text = message;
@@ -68,6 +73,7 @@ public class MessageScript : MonoBehaviour
             this.gameObject.SetActive(false);
             //Show message in messagebox
         }
+        timer.AddTime();
     }
 
     void OnMouseOver()

@@ -17,10 +17,11 @@ public class LostObjectScript : MonoBehaviour
     public TimerScript timer;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         invisible = true;
-        state = Random.Range(1, 4);
+        state = 3;
+            //Random.Range(1, 4);
         if (state == 1)
         {
             this.gameObject.transform.position = position;
