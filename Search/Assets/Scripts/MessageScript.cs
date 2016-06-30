@@ -19,10 +19,6 @@ public class MessageScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //Debug.Log("1" + message + "1");
-        //Debug.Log("2" + message2 + "2");
-        //Debug.Log("3" + message3 + "3");
-
         originalPos = this.gameObject.transform.position;
         StartCoroutine(FlowMoving());
 

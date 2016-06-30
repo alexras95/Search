@@ -20,8 +20,7 @@ public class LostObjectScript : MonoBehaviour
     void Awake()
     {
         invisible = true;
-        state = 3;
-            //Random.Range(1, 4);
+        state = Random.Range(1, 4);
         if (state == 1)
         {
             this.gameObject.transform.position = position;
@@ -68,7 +67,6 @@ public class LostObjectScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        Debug.Log("detected");
         invisible = false;
         if (movingUp)
         {
