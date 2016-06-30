@@ -19,6 +19,26 @@ public class MessageScript : MonoBehaviour
     {
         originalPos = this.gameObject.transform.position;
         StartCoroutine(FlowMoving());
+
+        if(lostObject.state == 1)
+        {
+            if(message == "")
+            {
+                this.gameObject.SetActive(false);
+            }
+        }else if(lostObject.state == 2)
+        {
+            if(message2 == "")
+            {
+                this.gameObject.SetActive(false);
+            }
+        }else if(lostObject.state == 3)
+        {
+            if(message3 == "")
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -29,6 +49,7 @@ public class MessageScript : MonoBehaviour
 
     void OnMouseDown()
     {
+
         if (lostObject.state == 1)
         {
             messageText.text = message;

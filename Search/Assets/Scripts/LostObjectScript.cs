@@ -31,7 +31,7 @@ public class LostObjectScript : MonoBehaviour
         }
         else if (state == 3)
         {
-            this.gameObject.transform.position = position;
+            this.gameObject.transform.position = position3;
         }
     }
 
@@ -43,23 +43,32 @@ public class LostObjectScript : MonoBehaviour
 
         if (invisible)
         {
-            //
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 
     void OnMouseDown()
     {
-        PlayerPrefs.SetInt("TotalRuntime", timer.GetTotalRunTime());
-        PlayerPrefs.SetInt("LastPlayedScene", SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("Finished with " + PlayerPrefs.GetInt("TotalRuntime"));
-        SceneManager.LoadScene(2);
+        if (!invisible)
+        {
+            PlayerPrefs.SetInt("TotalRuntime", timer.GetTotalRunTime());
+            PlayerPrefs.SetInt("LastPlayedScene", SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("Finished with " + PlayerPrefs.GetInt("TotalRuntime"));
+            SceneManager.LoadScene(2);
 
-        this.gameObject.SetActive(false);
-        //Show message in messagebox
+            this.gameObject.SetActive(false);
+            //Show message in messagebox
+        }
     }
 
     void OnMouseOver()
     {
+        Debug.Log("detected");
+        invisible = false;
         if (movingUp)
         {
             this.gameObject.transform.Translate(new Vector3(0, 0.02f, 0));
