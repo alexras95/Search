@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EndScreenScript.cs" />
+    <Compile Include="Assets\Scripts\LostObjectScript.cs" />
     <Compile Include="Assets\Scripts\MessageScript.cs" />
     <Compile Include="Assets\Scripts\StartMenuUIScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
